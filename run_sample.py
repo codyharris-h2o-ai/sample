@@ -1,7 +1,7 @@
 import time
 from h2o_wave import site, ui
 
-page = site['/beer']
+page = site['/']
 
 beer_card = page.add('wall', ui.markdown_card(
     box='1 1 4 2',
@@ -9,11 +9,12 @@ beer_card = page.add('wall', ui.markdown_card(
     content='',
 ))
 
-for i in range(99, 0, -1):
-    beer_card.content = f"""
-{i} bottles of beer on the wall, {i} bottles of beer.
+while True:
+    for i in range(99, 0, -1):
+        beer_card.content = f"""
+    {i} bottles of beer on the wall, {i} bottles of beer.
 
-Take one down, pass it around, {i - 1} bottles of beer on the wall...
-"""
-    page.save()
-    time.sleep(1)
+    Take one down, pass it around, {i - 1} bottles of beer on the wall...
+    """
+        page.save()
+        time.sleep(1)

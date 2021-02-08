@@ -1,8 +1,9 @@
 [app]
 Name = "ai.h2o.hac.quicksample"
-Version = "0.1.0"
+Version = "0.2.0"
 Title = "Quick Wave Sample"
 Description = "Sample Wave, Quickly"
+Category = "Other"
 
 [Runtime]
 Module = "run_sample"
